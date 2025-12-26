@@ -1,4 +1,4 @@
-Imports System.Data.OleDb
+Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
 Imports System.Runtime.InteropServices
 
@@ -113,9 +113,9 @@ Public Class Form1
 		'btnCopy
 		'
 		Me.btnCopy.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btnCopy.Location = New System.Drawing.Point(1067, 575)
+		Me.btnCopy.Location = New System.Drawing.Point(678, 188)
 		Me.btnCopy.Name = "btnCopy"
-		Me.btnCopy.Size = New System.Drawing.Size(160, 34)
+		Me.btnCopy.Size = New System.Drawing.Size(100, 24)
 		Me.btnCopy.TabIndex = 0
 		Me.btnCopy.Text = "Copy tables"
 		'
@@ -124,26 +124,26 @@ Public Class Form1
 		Me.txtFolderPath.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
 		Me.txtFolderPath.BackColor = System.Drawing.SystemColors.Window
-		Me.txtFolderPath.Location = New System.Drawing.Point(117, 12)
+		Me.txtFolderPath.Location = New System.Drawing.Point(73, 8)
 		Me.txtFolderPath.Name = "txtFolderPath"
-		Me.txtFolderPath.Size = New System.Drawing.Size(1335, 26)
+		Me.txtFolderPath.Size = New System.Drawing.Size(764, 20)
 		Me.txtFolderPath.TabIndex = 1
 		'
 		'btnConnect1
 		'
 		Me.btnConnect1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btnConnect1.Location = New System.Drawing.Point(1462, 13)
+		Me.btnConnect1.Location = New System.Drawing.Point(925, 9)
 		Me.btnConnect1.Name = "btnConnect1"
-		Me.btnConnect1.Size = New System.Drawing.Size(120, 34)
+		Me.btnConnect1.Size = New System.Drawing.Size(75, 23)
 		Me.btnConnect1.TabIndex = 3
 		Me.btnConnect1.Text = "Connect"
 		'
 		'btnCancel
 		'
 		Me.btnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btnCancel.Location = New System.Drawing.Point(1416, 572)
+		Me.btnCancel.Location = New System.Drawing.Point(896, 186)
 		Me.btnCancel.Name = "btnCancel"
-		Me.btnCancel.Size = New System.Drawing.Size(166, 35)
+		Me.btnCancel.Size = New System.Drawing.Size(104, 24)
 		Me.btnCancel.TabIndex = 6
 		Me.btnCancel.Text = "Cancel"
 		'
@@ -151,17 +151,17 @@ Public Class Form1
 		'
 		Me.ProgressBar1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.ProgressBar1.Location = New System.Drawing.Point(358, 814)
+		Me.ProgressBar1.Location = New System.Drawing.Point(224, 352)
 		Me.ProgressBar1.Name = "ProgressBar1"
-		Me.ProgressBar1.Size = New System.Drawing.Size(1088, 16)
+		Me.ProgressBar1.Size = New System.Drawing.Size(691, 11)
 		Me.ProgressBar1.TabIndex = 7
 		'
 		'Label1
 		'
 		Me.Label1.AutoSize = True
-		Me.Label1.Location = New System.Drawing.Point(8, 19)
+		Me.Label1.Location = New System.Drawing.Point(5, 13)
 		Me.Label1.Name = "Label1"
-		Me.Label1.Size = New System.Drawing.Size(54, 20)
+		Me.Label1.Size = New System.Drawing.Size(36, 13)
 		Me.Label1.TabIndex = 8
 		Me.Label1.Text = "Folder"
 		'
@@ -171,9 +171,9 @@ Public Class Form1
 		Me.chkCreateTable.AutoSize = True
 		Me.chkCreateTable.Checked = True
 		Me.chkCreateTable.CheckState = System.Windows.Forms.CheckState.Checked
-		Me.chkCreateTable.Location = New System.Drawing.Point(16, 534)
+		Me.chkCreateTable.Location = New System.Drawing.Point(10, 160)
 		Me.chkCreateTable.Name = "chkCreateTable"
-		Me.chkCreateTable.Size = New System.Drawing.Size(168, 24)
+		Me.chkCreateTable.Size = New System.Drawing.Size(113, 17)
 		Me.chkCreateTable.TabIndex = 11
 		Me.chkCreateTable.Text = "Create target table"
 		Me.chkCreateTable.UseVisualStyleBackColor = True
@@ -182,11 +182,11 @@ Public Class Form1
 		'
 		Me.txtLog.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.txtLog.Location = New System.Drawing.Point(13, 618)
+		Me.txtLog.Location = New System.Drawing.Point(8, 218)
 		Me.txtLog.Multiline = True
 		Me.txtLog.Name = "txtLog"
 		Me.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-		Me.txtLog.Size = New System.Drawing.Size(1569, 193)
+		Me.txtLog.Size = New System.Drawing.Size(992, 132)
 		Me.txtLog.TabIndex = 12
 		'
 		'chkDeleteData
@@ -195,9 +195,9 @@ Public Class Form1
 		Me.chkDeleteData.AutoSize = True
 		Me.chkDeleteData.Checked = True
 		Me.chkDeleteData.CheckState = System.Windows.Forms.CheckState.Checked
-		Me.chkDeleteData.Location = New System.Drawing.Point(410, 534)
+		Me.chkDeleteData.Location = New System.Drawing.Point(256, 160)
 		Me.chkDeleteData.Name = "chkDeleteData"
-		Me.chkDeleteData.Size = New System.Drawing.Size(175, 24)
+		Me.chkDeleteData.Size = New System.Drawing.Size(118, 17)
 		Me.chkDeleteData.TabIndex = 13
 		Me.chkDeleteData.Text = "Delete before insert"
 		Me.chkDeleteData.UseVisualStyleBackColor = True
@@ -206,9 +206,9 @@ Public Class Form1
 		'
 		Me.lbCount.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
 		Me.lbCount.AutoSize = True
-		Me.lbCount.Location = New System.Drawing.Point(1511, 816)
+		Me.lbCount.Location = New System.Drawing.Point(955, 353)
 		Me.lbCount.Name = "lbCount"
-		Me.lbCount.Size = New System.Drawing.Size(36, 20)
+		Me.lbCount.Size = New System.Drawing.Size(25, 13)
 		Me.lbCount.TabIndex = 14
 		Me.lbCount.Text = "000"
 		Me.lbCount.Visible = False
@@ -216,9 +216,9 @@ Public Class Form1
 		'Label2
 		'
 		Me.Label2.AutoSize = True
-		Me.Label2.Location = New System.Drawing.Point(8, 60)
+		Me.Label2.Location = New System.Drawing.Point(5, 41)
 		Me.Label2.Name = "Label2"
-		Me.Label2.Size = New System.Drawing.Size(91, 20)
+		Me.Label2.Size = New System.Drawing.Size(62, 13)
 		Me.Label2.TabIndex = 15
 		Me.Label2.Text = "SQL Server"
 		'
@@ -226,17 +226,17 @@ Public Class Form1
 		'
 		Me.txtConnectTo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.txtConnectTo.Location = New System.Drawing.Point(117, 60)
+		Me.txtConnectTo.Location = New System.Drawing.Point(73, 41)
 		Me.txtConnectTo.Name = "txtConnectTo"
-		Me.txtConnectTo.Size = New System.Drawing.Size(1335, 26)
+		Me.txtConnectTo.Size = New System.Drawing.Size(846, 20)
 		Me.txtConnectTo.TabIndex = 16
 		'
 		'btnConnect2
 		'
 		Me.btnConnect2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btnConnect2.Location = New System.Drawing.Point(1462, 57)
+		Me.btnConnect2.Location = New System.Drawing.Point(925, 39)
 		Me.btnConnect2.Name = "btnConnect2"
-		Me.btnConnect2.Size = New System.Drawing.Size(120, 34)
+		Me.btnConnect2.Size = New System.Drawing.Size(75, 23)
 		Me.btnConnect2.TabIndex = 17
 		Me.btnConnect2.Text = "Connect"
 		Me.btnConnect2.UseVisualStyleBackColor = True
@@ -250,19 +250,19 @@ Public Class Form1
 			Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
 		Me.dgTables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-		Me.dgTables.Location = New System.Drawing.Point(8, 99)
+		Me.dgTables.Location = New System.Drawing.Point(5, 68)
 		Me.dgTables.Name = "dgTables"
 		Me.dgTables.RowHeadersWidth = 62
-		Me.dgTables.Size = New System.Drawing.Size(1574, 424)
+		Me.dgTables.Size = New System.Drawing.Size(995, 85)
 		Me.dgTables.TabIndex = 20
 		'
 		'chkDropTable
 		'
 		Me.chkDropTable.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
 		Me.chkDropTable.AutoSize = True
-		Me.chkDropTable.Location = New System.Drawing.Point(16, 575)
+		Me.chkDropTable.Location = New System.Drawing.Point(10, 188)
 		Me.chkDropTable.Name = "chkDropTable"
-		Me.chkDropTable.Size = New System.Drawing.Size(165, 24)
+		Me.chkDropTable.Size = New System.Drawing.Size(112, 17)
 		Me.chkDropTable.TabIndex = 33
 		Me.chkDropTable.Text = "Drop table if exists"
 		Me.chkDropTable.UseVisualStyleBackColor = True
@@ -270,9 +270,9 @@ Public Class Form1
 		'btnCheckAll
 		'
 		Me.btnCheckAll.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btnCheckAll.Location = New System.Drawing.Point(1245, 529)
+		Me.btnCheckAll.Location = New System.Drawing.Point(789, 157)
 		Me.btnCheckAll.Name = "btnCheckAll"
-		Me.btnCheckAll.Size = New System.Drawing.Size(160, 33)
+		Me.btnCheckAll.Size = New System.Drawing.Size(100, 23)
 		Me.btnCheckAll.TabIndex = 35
 		Me.btnCheckAll.Text = "Check All"
 		Me.btnCheckAll.UseVisualStyleBackColor = True
@@ -280,9 +280,9 @@ Public Class Form1
 		'btnUncheckAll
 		'
 		Me.btnUncheckAll.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btnUncheckAll.Location = New System.Drawing.Point(1416, 529)
+		Me.btnUncheckAll.Location = New System.Drawing.Point(896, 157)
 		Me.btnUncheckAll.Name = "btnUncheckAll"
-		Me.btnUncheckAll.Size = New System.Drawing.Size(166, 33)
+		Me.btnUncheckAll.Size = New System.Drawing.Size(104, 23)
 		Me.btnUncheckAll.TabIndex = 36
 		Me.btnUncheckAll.Text = "Uncheck All"
 		Me.btnUncheckAll.UseVisualStyleBackColor = True
@@ -290,17 +290,17 @@ Public Class Form1
 		'ProgressBar2
 		'
 		Me.ProgressBar2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-		Me.ProgressBar2.Location = New System.Drawing.Point(8, 814)
+		Me.ProgressBar2.Location = New System.Drawing.Point(5, 352)
 		Me.ProgressBar2.Name = "ProgressBar2"
-		Me.ProgressBar2.Size = New System.Drawing.Size(341, 16)
+		Me.ProgressBar2.Size = New System.Drawing.Size(213, 11)
 		Me.ProgressBar2.TabIndex = 38
 		'
 		'btnCheckNew
 		'
 		Me.btnCheckNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btnCheckNew.Location = New System.Drawing.Point(1067, 529)
+		Me.btnCheckNew.Location = New System.Drawing.Point(678, 157)
 		Me.btnCheckNew.Name = "btnCheckNew"
-		Me.btnCheckNew.Size = New System.Drawing.Size(160, 33)
+		Me.btnCheckNew.Size = New System.Drawing.Size(100, 23)
 		Me.btnCheckNew.TabIndex = 37
 		Me.btnCheckNew.Text = "Check New Rec"
 		Me.btnCheckNew.UseVisualStyleBackColor = True
@@ -309,9 +309,9 @@ Public Class Form1
 		'
 		Me.btnStop.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
 		Me.btnStop.AutoSize = True
-		Me.btnStop.Location = New System.Drawing.Point(1455, 814)
+		Me.btnStop.Location = New System.Drawing.Point(920, 352)
 		Me.btnStop.Name = "btnStop"
-		Me.btnStop.Size = New System.Drawing.Size(43, 20)
+		Me.btnStop.Size = New System.Drawing.Size(29, 13)
 		Me.btnStop.TabIndex = 40
 		Me.btnStop.TabStop = True
 		Me.btnStop.Text = "Stop"
@@ -322,9 +322,9 @@ Public Class Form1
 		'
 		Me.chkHideNotSelected.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
 		Me.chkHideNotSelected.AutoSize = True
-		Me.chkHideNotSelected.Location = New System.Drawing.Point(611, 534)
+		Me.chkHideNotSelected.Location = New System.Drawing.Point(382, 160)
 		Me.chkHideNotSelected.Name = "chkHideNotSelected"
-		Me.chkHideNotSelected.Size = New System.Drawing.Size(159, 24)
+		Me.chkHideNotSelected.Size = New System.Drawing.Size(109, 17)
 		Me.chkHideNotSelected.TabIndex = 42
 		Me.chkHideNotSelected.Text = "Hide not selected"
 		Me.chkHideNotSelected.UseVisualStyleBackColor = True
@@ -333,9 +333,9 @@ Public Class Form1
 		'
 		Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
 		Me.Label3.AutoSize = True
-		Me.Label3.Location = New System.Drawing.Point(815, 583)
+		Me.Label3.Location = New System.Drawing.Point(509, 194)
 		Me.Label3.Name = "Label3"
-		Me.Label3.Size = New System.Drawing.Size(71, 20)
+		Me.Label3.Size = New System.Drawing.Size(47, 13)
 		Me.Label3.TabIndex = 43
 		Me.Label3.Text = "Delimiter"
 		'
@@ -344,9 +344,9 @@ Public Class Form1
 		Me.selDelimiter.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
 		Me.selDelimiter.FormattingEnabled = True
 		Me.selDelimiter.Items.AddRange(New Object() {",", "|", "Tab"})
-		Me.selDelimiter.Location = New System.Drawing.Point(892, 579)
+		Me.selDelimiter.Location = New System.Drawing.Point(558, 191)
 		Me.selDelimiter.Name = "selDelimiter"
-		Me.selDelimiter.Size = New System.Drawing.Size(121, 28)
+		Me.selDelimiter.Size = New System.Drawing.Size(75, 21)
 		Me.selDelimiter.TabIndex = 44
 		'
 		'chkShrinkTable
@@ -355,9 +355,9 @@ Public Class Form1
 		Me.chkShrinkTable.AutoSize = True
 		Me.chkShrinkTable.Checked = True
 		Me.chkShrinkTable.CheckState = System.Windows.Forms.CheckState.Checked
-		Me.chkShrinkTable.Location = New System.Drawing.Point(410, 575)
+		Me.chkShrinkTable.Location = New System.Drawing.Point(256, 188)
 		Me.chkShrinkTable.Name = "chkShrinkTable"
-		Me.chkShrinkTable.Size = New System.Drawing.Size(119, 24)
+		Me.chkShrinkTable.Size = New System.Drawing.Size(82, 17)
 		Me.chkShrinkTable.TabIndex = 45
 		Me.chkShrinkTable.Text = "Shrink table"
 		Me.chkShrinkTable.UseVisualStyleBackColor = True
@@ -365,9 +365,9 @@ Public Class Form1
 		'btnDeleteFolderCache
 		'
 		Me.btnDeleteFolderCache.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btnDeleteFolderCache.Location = New System.Drawing.Point(1332, 13)
+		Me.btnDeleteFolderCache.Location = New System.Drawing.Point(843, 9)
 		Me.btnDeleteFolderCache.Name = "btnDeleteFolderCache"
-		Me.btnDeleteFolderCache.Size = New System.Drawing.Size(120, 34)
+		Me.btnDeleteFolderCache.Size = New System.Drawing.Size(76, 23)
 		Me.btnDeleteFolderCache.TabIndex = 46
 		Me.btnDeleteFolderCache.Text = "Delete Cache"
 		Me.btnDeleteFolderCache.Visible = False
@@ -375,9 +375,9 @@ Public Class Form1
 		'btnShrinkTables
 		'
 		Me.btnShrinkTables.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btnShrinkTables.Location = New System.Drawing.Point(1245, 575)
+		Me.btnShrinkTables.Location = New System.Drawing.Point(789, 188)
 		Me.btnShrinkTables.Name = "btnShrinkTables"
-		Me.btnShrinkTables.Size = New System.Drawing.Size(160, 34)
+		Me.btnShrinkTables.Size = New System.Drawing.Size(100, 24)
 		Me.btnShrinkTables.TabIndex = 47
 		Me.btnShrinkTables.Text = "Shrink tables"
 		'
@@ -387,9 +387,9 @@ Public Class Form1
 		Me.chkRec_id.AutoSize = True
 		Me.chkRec_id.Checked = True
 		Me.chkRec_id.CheckState = System.Windows.Forms.CheckState.Checked
-		Me.chkRec_id.Location = New System.Drawing.Point(211, 534)
+		Me.chkRec_id.Location = New System.Drawing.Point(132, 160)
 		Me.chkRec_id.Name = "chkRec_id"
-		Me.chkRec_id.Size = New System.Drawing.Size(111, 24)
+		Me.chkRec_id.Size = New System.Drawing.Size(77, 17)
 		Me.chkRec_id.TabIndex = 48
 		Me.chkRec_id.Text = "Add rec_id"
 		Me.chkRec_id.UseVisualStyleBackColor = True
@@ -400,9 +400,9 @@ Public Class Form1
 		Me.chkNvarChar.AutoSize = True
 		Me.chkNvarChar.Checked = True
 		Me.chkNvarChar.CheckState = System.Windows.Forms.CheckState.Checked
-		Me.chkNvarChar.Location = New System.Drawing.Point(211, 575)
+		Me.chkNvarChar.Location = New System.Drawing.Point(132, 188)
 		Me.chkNvarChar.Name = "chkNvarChar"
-		Me.chkNvarChar.Size = New System.Drawing.Size(129, 24)
+		Me.chkNvarChar.Size = New System.Drawing.Size(90, 17)
 		Me.chkNvarChar.TabIndex = 49
 		Me.chkNvarChar.Text = "Use nvarchar"
 		Me.chkNvarChar.UseVisualStyleBackColor = True
@@ -411,9 +411,9 @@ Public Class Form1
 		'
 		Me.chkScriptToFile.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
 		Me.chkScriptToFile.AutoSize = True
-		Me.chkScriptToFile.Location = New System.Drawing.Point(819, 534)
+		Me.chkScriptToFile.Location = New System.Drawing.Point(512, 160)
 		Me.chkScriptToFile.Name = "chkScriptToFile"
-		Me.chkScriptToFile.Size = New System.Drawing.Size(127, 24)
+		Me.chkScriptToFile.Size = New System.Drawing.Size(88, 17)
 		Me.chkScriptToFile.TabIndex = 50
 		Me.chkScriptToFile.Text = "Script To File"
 		Me.chkScriptToFile.UseVisualStyleBackColor = True
@@ -422,17 +422,19 @@ Public Class Form1
 		'
 		Me.chkBulkInsert.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
 		Me.chkBulkInsert.AutoSize = True
-		Me.chkBulkInsert.Location = New System.Drawing.Point(611, 575)
+		Me.chkBulkInsert.Checked = True
+		Me.chkBulkInsert.CheckState = System.Windows.Forms.CheckState.Checked
+		Me.chkBulkInsert.Location = New System.Drawing.Point(382, 188)
 		Me.chkBulkInsert.Name = "chkBulkInsert"
-		Me.chkBulkInsert.Size = New System.Drawing.Size(111, 24)
+		Me.chkBulkInsert.Size = New System.Drawing.Size(76, 17)
 		Me.chkBulkInsert.TabIndex = 51
 		Me.chkBulkInsert.Text = "Bulk Insert"
 		Me.chkBulkInsert.UseVisualStyleBackColor = True
 		'
 		'Form1
 		'
-		Me.AutoScaleBaseSize = New System.Drawing.Size(8, 19)
-		Me.ClientSize = New System.Drawing.Size(1612, 838)
+		Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+		Me.ClientSize = New System.Drawing.Size(1019, 368)
 		Me.Controls.Add(Me.chkBulkInsert)
 		Me.Controls.Add(Me.chkScriptToFile)
 		Me.Controls.Add(Me.chkNvarChar)
@@ -527,15 +529,18 @@ Public Class Form1
 		Windows.Forms.Application.DoEvents()
 		SetTableGrid(False)
 
-		Dim sSortedColumn As String = oAppSetting.GetSetting("SortedColumn")
-		If sSortedColumn <> "" Then
-			Dim sSortOrder As String = oAppSetting.GetSetting("SortOrder")
-			If sSortOrder = "Ascending" Then
-				dgTables.Sort(dgTables.Columns(sSortedColumn), System.ComponentModel.ListSortDirection.Ascending)
-			Else
-				dgTables.Sort(dgTables.Columns(sSortedColumn), System.ComponentModel.ListSortDirection.Descending)
+		If dgTables.Rows.Count > 0 Then
+			Dim sSortedColumn As String = oAppSetting.GetSetting("SortedColumn")
+			If sSortedColumn <> "" Then
+				Dim sSortOrder As String = oAppSetting.GetSetting("SortOrder")
+				If sSortOrder = "Ascending" Then
+					dgTables.Sort(dgTables.Columns(sSortedColumn), System.ComponentModel.ListSortDirection.Ascending)
+				Else
+					dgTables.Sort(dgTables.Columns(sSortedColumn), System.ComponentModel.ListSortDirection.Descending)
+				End If
 			End If
 		End If
+
 	End Sub
 
 	Private Function GetCsvDelimeter2() As String
@@ -879,7 +884,7 @@ Public Class Form1
 			Return Nothing
 		End If
 
-		Dim cn As OleDbConnection = New OleDbConnection(txtConnectTo.Text)
+		Dim cn As SqlConnection = New SqlConnection(txtConnectTo.Text)
 
 		Try
 			cn.Open()
@@ -889,7 +894,7 @@ Public Class Form1
 		End Try
 
 		Dim sSql As String = "SELECT TABLE_SCHEMA, TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE'"
-		Dim oTable As Data.DataTable = cn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, New Object() {Nothing, Nothing, Nothing, Nothing})
+		Dim oTable As Data.DataTable = GetTable(cn, sSql)
 
 		Dim oRetTable As New Data.DataTable
 		oRetTable.Columns.Add(New Data.DataColumn("Name"))
@@ -906,8 +911,8 @@ Public Class Form1
 				End If
 
 				Try
-					Dim cmd As New OleDbCommand("sp_MStablespace '" & sKey & "'", cn)
-					Dim dr As OleDbDataReader = cmd.ExecuteReader()
+					Dim cmd As New SqlCommand("sp_MStablespace '" & sKey & "'", cn)
+					Dim dr As SqlDataReader = cmd.ExecuteReader()
 					If dr.Read Then
 						Dim iRowCount As Integer = CInt(dr.GetValue(dr.GetOrdinal("Rows")))
 						If iRowCount > 0 Then
@@ -995,7 +1000,7 @@ Public Class Form1
 			Exit Sub
 		End If
 
-		Dim cn As OleDbConnection = New OleDbConnection(txtConnectTo.Text)
+		Dim cn As SqlConnection = New SqlConnection(txtConnectTo.Text)
 
 		Try
 			cn.Open()
@@ -1042,7 +1047,7 @@ Public Class Form1
 
 	Private Sub btnShrinkTables_Click(sender As Object, e As EventArgs) Handles btnShrinkTables.Click
 
-		Dim cn As OleDbConnection = New OleDbConnection(txtConnectTo.Text)
+		Dim cn As SqlConnection = New SqlConnection(txtConnectTo.Text)
 
 		Try
 			cn.Open()
@@ -1091,13 +1096,13 @@ Public Class Form1
 		cn.Close()
 	End Sub
 
-	Private Sub OpenConnections(ByRef cn As OleDbConnection)
+	Private Sub OpenConnections(ByRef cn As SqlConnection)
 		If cn.State <> ConnectionState.Open Then
 			cn.Open()
 		End If
 	End Sub
 
-	Private Sub CopyTable(ByVal sTableName As String, ByRef cn As OleDbConnection)
+	Private Sub CopyTable(ByVal sTableName As String, ByRef cn As SqlConnection)
 
 		Dim dStart As DateTime = DateTime.Now
 		Dim bDestTableExists As Boolean = False
@@ -1118,7 +1123,7 @@ Public Class Form1
 		End If
 
 		Try
-			Dim cm As New OleDbCommand("SELECT Count(*) FROM " & PadColumnName(sTableName), cn)
+			Dim cm As New SqlCommand("SELECT Count(*) FROM " & PadColumnName(sTableName), cn)
 			iDestRecCount = Integer.Parse(cm.ExecuteScalar().ToString())
 			bDestTableExists = True
 		Catch ex As Exception
@@ -1163,8 +1168,11 @@ Public Class Form1
 
 		Log("Copying " & iLineCount & " rows from table: " & sTableName)
 
-		InsertFromFile(sFilePath, sTableName, cn, iLineCount,
-						   chkCreateTable.Checked And bDestTableExists = False)
+		If chkBulkInsert.Checked Then
+			BulkInsertFromFile(sFilePath, sTableName, cn, iLineCount, chkCreateTable.Checked And bDestTableExists = False)
+		Else
+			InsertFromFile(sFilePath, sTableName, cn, iLineCount, chkCreateTable.Checked And bDestTableExists = False)
+		End If
 
 		Log("Copied table " & sTableName & vbTab & " in " & GetDuration(dStart))
 
@@ -1176,9 +1184,190 @@ Public Class Form1
 
 	End Sub
 
+	Sub CreateTableFromDataTable(ByRef cn As SqlConnection, dt As DataTable, ByVal sTableName As String)
+		Dim sCreateColumns As String = ""
+
+		If chkRec_id.Checked Then
+			sCreateColumns += "rec_id int not null primary key clustered identity(1,1)"
+		End If
+
+		For iCol = 0 To dt.Columns.Count - 1
+			Dim sCol As String = dt.Columns(iCol).ColumnName
+			If sCreateColumns <> "" Then sCreateColumns += ", "
+			sCreateColumns += PadColumnName(sCol) & " " & GetNvarChar() & "(max) NULL"
+		Next
+
+		Dim sSql As String = "create table " & PadColumnName(sTableName) & " (" & sCreateColumns & ")"
+		ExecuteCommand(cn, sSql)
+	End Sub
+
+	Private Sub BulkInsertFromFile(ByVal csvPath As String,
+								   ByVal destinationTableName As String,
+								   ByRef cn As SqlConnection,
+								   ByVal iLineCount As Integer,
+								   ByVal bCreateTable As Boolean,
+								   Optional batchSize As Integer = 50000,
+								   Optional bulkCopyTimeoutSeconds As Integer = 0,
+								   Optional delimiter As String = ",",
+								   Optional hasHeaders As Boolean = True,
+								   Optional keepNullsAsDBNull As Boolean = True)
+
+
+		ProgressBar1.Value = 0
+		ProgressBar1.Maximum = iLineCount
+		lbCount.Visible = False
+		lbCount.Text = ""
+		btnStop.Visible = False
+
+		Dim swTotal As Stopwatch = Stopwatch.StartNew()
+		Dim totalRead As Long = 0
+		Dim totalInserted As Long = 0
+		Dim batchNumber As Integer = 0
+
+		Using parser As New Microsoft.VisualBasic.FileIO.TextFieldParser(csvPath)
+			parser.TextFieldType = Microsoft.VisualBasic.FileIO.FieldType.Delimited
+			parser.SetDelimiters(delimiter)
+			parser.HasFieldsEnclosedInQuotes = True
+			parser.TrimWhiteSpace = False
+
+			Dim columnNames As String() = Nothing
+			Dim firstRow As String() = Nothing
+
+			If parser.EndOfData Then
+				Exit Sub
+			End If
+
+			If hasHeaders Then
+				columnNames = parser.ReadFields()
+				If columnNames Is Nothing OrElse columnNames.Length = 0 Then
+					Exit Sub
+				End If
+			Else
+				firstRow = parser.ReadFields()
+				If firstRow Is Nothing OrElse firstRow.Length = 0 Then
+					Exit Sub
+				End If
+
+				ReDim columnNames(firstRow.Length - 1)
+				For i = 0 To columnNames.Length - 1
+					columnNames(i) = "Col" & (i + 1).ToString(System.Globalization.CultureInfo.InvariantCulture)
+				Next
+			End If
+
+			' Prepare bulk copy once
+			Using bulk As New SqlBulkCopy(cn, SqlBulkCopyOptions.TableLock, Nothing)
+				bulk.DestinationTableName = destinationTableName
+				bulk.BatchSize = batchSize
+				If bulkCopyTimeoutSeconds > 0 Then bulk.BulkCopyTimeout = bulkCopyTimeoutSeconds
+
+				' Column mappings by name (CSV header must match destination columns)
+				For Each col In columnNames
+					bulk.ColumnMappings.Add(col, col)
+				Next
+
+				' Now stream rows in batches
+				Dim dt As DataTable = CreateBatchTable(columnNames)
+
+				' If we already consumed the first row (no headers), add it first
+				If firstRow IsNot Nothing Then
+					AddRowToBatch(dt, firstRow, keepNullsAsDBNull)
+				End If
+
+				If bCreateTable Then
+					CreateTableFromDataTable(cn, dt, destinationTableName)
+				End If
+
+				Dim swBatch As New Stopwatch()
+
+				While Not parser.EndOfData
+					Dim fields As String()
+
+					Try
+						fields = parser.ReadFields()
+					Catch ex As Microsoft.VisualBasic.FileIO.MalformedLineException
+						' You can log ex.LineNumber / ex.Message and continue, or rethrow.
+						Throw New Exception($"Malformed CSV at line {ex.LineNumber}.", ex)
+					End Try
+
+					If fields Is Nothing Then Continue While
+
+					AddRowToBatch(dt, fields, keepNullsAsDBNull)
+
+					totalRead += 1
+					ProgressBar1.Value = CInt(totalRead)
+
+					If dt.Rows.Count >= batchSize Then
+						batchNumber += 1
+						bulk.WriteToServer(dt)
+						totalInserted += dt.Rows.Count
+
+						swBatch.Stop()
+						Log($"Batch {batchNumber:N0} | Rows: {dt.Rows.Count:N0} | " &
+							$"Batch time: {swBatch.Elapsed.TotalSeconds:N2}s | " &
+							$"Total rows: {totalInserted:N0}")
+						swBatch.Restart()
+
+						dt.Clear() ' keep schema, release rows
+					End If
+				End While
+
+				' Flush remaining rows
+				If dt.Rows.Count > 0 Then
+					bulk.WriteToServer(dt)
+					totalInserted += dt.Rows.Count
+					dt.Clear()
+				End If
+			End Using
+		End Using
+
+		ProgressBar1.Value = 0
+		lbCount.Visible = False
+		lbCount.Text = ""
+		btnStop.Visible = False
+
+		swTotal.Stop()
+
+		Debug.WriteLine(
+			$"CSV load complete | File: {csvPath} | " &
+			$"Rows inserted: {totalInserted:N0} | " &
+			$"Total time: {swTotal.Elapsed.TotalMinutes:N2} minutes"
+		)
+
+	End Sub
+
+	' Creates a DataTable for one batch (all string columns by default)
+	Private Function CreateBatchTable(columnNames As String()) As DataTable
+		Dim dt As New DataTable()
+		For Each Name As String In columnNames
+			Dim colName = If(String.IsNullOrWhiteSpace(Name), "UnnamedColumn", Name.Trim())
+			' Defaulting to String keeps it fast and avoids type conversion memory overhead.
+			dt.Columns.Add(colName, GetType(String))
+		Next
+		Return dt
+	End Function
+
+	' Adds one CSV record into the batch table (pads/trim fields to match column count)
+	Private Sub AddRowToBatch(dt As DataTable, fields As String(), keepNullsAsDBNull As Boolean)
+		Dim colCount = dt.Columns.Count
+		Dim row = dt.NewRow()
+
+		For i = 0 To colCount - 1
+			Dim value As String = Nothing
+			If i < fields.Length Then value = fields(i)
+
+			If keepNullsAsDBNull AndAlso (value Is Nothing OrElse value.Length = 0) Then
+				row(i) = DBNull.Value
+			Else
+				row(i) = value
+			End If
+		Next
+
+		dt.Rows.Add(row)
+	End Sub
+
 	Private Sub InsertFromFile(ByVal sFilePath As String,
 							   ByVal sTableName As String,
-							   ByRef cn As OleDbConnection,
+							   ByRef cn As SqlConnection,
 							   ByVal iLineCount As Integer,
 							   ByVal bCreateTable As Boolean)
 
@@ -1186,6 +1375,7 @@ Public Class Form1
 		lbCount.Visible = True
 		btnStop.Visible = True
 
+		Dim swTotal As Stopwatch = Stopwatch.StartNew()
 		Dim sCreateColumns As String = ""
 
 		If chkRec_id.Checked Then
@@ -1222,10 +1412,6 @@ Public Class Form1
 							Dim sSql As String = "create table " & PadColumnName(sTableName) & " (" & sCreateColumns & ")"
 							ExecuteCommand(cn, sSql)
 						End If
-
-						If chkBulkInsert.Checked Then
-							Exit While
-						End If
 					End If
 
 					If oColumns.ContainsKey(iCol) Then
@@ -1261,27 +1447,20 @@ Public Class Form1
 			Windows.Forms.Application.DoEvents()
 		End While
 
-		If chkBulkInsert.Checked Then
-			Dim sSql As String = "BULK INSERT [" & sTableName & "]" & vbCrLf &
-				" FROM '" & sFilePath & "'" & vbCrLf &
-				" WITH (FIRSTROW = 2"
-
-			If chkNvarChar.Checked Then
-				'DATAFILETYPE = 'widechar',
-				sSql += "CODEPAGE = '65001', "
-			End If
-
-			sSql += "FIELDTERMINATOR = '" & GetCsvDelimeter2() & "', ROWTERMINATOR = '\n')"
-
-			ExecuteCommand(cn, sSql, 60 * 60) ' one hour
-		End If
-
 		oTextFieldParser.Close()
 
 		ProgressBar1.Value = 0
 		lbCount.Visible = False
 		lbCount.Text = ""
 		btnStop.Visible = False
+
+		swTotal.Stop()
+
+		Debug.WriteLine(
+			$"CSV load complete | File: {sFilePath} | " &
+			$"Rows inserted: {iRow:N0} | " &
+			$"Total time: {swTotal.Elapsed.TotalMinutes:N2} minutes"
+		)
 	End Sub
 
 
@@ -1298,7 +1477,7 @@ Public Class Form1
 
 	Private Function CreateDataTable(ByRef oTable As System.Data.DataTable,
 									 ByVal sTableName As String,
-									 ByRef cn As OleDbConnection) As String
+									 ByRef cn As SqlConnection) As String
 
 		If oTable Is Nothing Then
 			Return ""
@@ -1366,17 +1545,42 @@ Public Class Form1
 
 		If sConnectionString = "" Then
 			sConnectionString = "Provider=SQLOLEDB.1"
+
+		ElseIf sConnectionString.ToLower().IndexOf("provider=") = -1 Then
+			sConnectionString = "Provider=SQLOLEDB.1;" & sConnectionString
 		End If
 
 		sConnectionString = EditConnectionString(sConnectionString)
+
 		If sConnectionString = "" Then
 			Exit Sub
 		End If
 
-		txtConnectTo.Text = sConnectionString
+		txtConnectTo.Text = RemoveProvider(sConnectionString)
 
 		SetTableGrid(True)
 	End Sub
+
+	Private Function RemoveProvider(ByVal s As String) As String
+		Dim oList As String() = Split(s, ";")
+		Dim sRet As String = ""
+
+		For i As Integer = 0 To oList.Length - 1
+			Dim sItem As String = oList(i)
+			Dim oItem As String() = Split(sItem, "=")
+			Dim sKey As String = LCase(oItem(0))
+			If "data source" = sKey Or
+			   "initial catalog" = sKey Or
+			   "user id" = sKey Or
+			   "integrated security" = sKey Or
+			   "password" = sKey Then
+
+				sRet += sItem & ";"
+			End If
+		Next
+
+		Return sRet
+	End Function
 
 	Private Sub btnCheckAll_Click(sender As Object, e As EventArgs) Handles btnCheckAll.Click
 		For iRow = 0 To dgTables.RowCount - 1
@@ -1455,7 +1659,7 @@ Public Class Form1
 		btnDeleteFolderCache.Visible = False
 	End Sub
 
-	Friend Sub Shrink(ByRef cn As Data.OleDb.OleDbConnection, ByVal sTable As String)
+	Friend Sub Shrink(ByRef cn As SqlConnection, ByVal sTable As String)
 		Dim oTable As DataTable = GetColumnsDataTable(cn, sTable)
 
 		If oTable.Rows.Count = 0 Then
@@ -1524,9 +1728,9 @@ Public Class Form1
 
 	End Sub
 
-	Function GetTable(ByRef cn As Data.OleDb.OleDbConnection, ByVal sSql As String) As System.Data.DataTable
+	Function GetTable(ByRef cn As SqlConnection, ByVal sSql As String) As System.Data.DataTable
 		Dim ds As DataSet = New DataSet
-		Dim ad As New OleDbDataAdapter(sSql, cn)
+		Dim ad As New SqlDataAdapter(sSql, cn)
 		ad.Fill(ds)
 		Return ds.Tables(0)
 	End Function
@@ -1546,7 +1750,7 @@ Public Class Form1
 		Return (s & "").Replace("'", "''")
 	End Function
 
-	Friend Function GetColumnsDataTable(ByRef cn As Data.OleDb.OleDbConnection, ByVal sTableName As String) As DataTable
+	Friend Function GetColumnsDataTable(ByRef cn As SqlConnection, ByVal sTableName As String) As DataTable
 		Dim oDataTable As New DataTable
 
 		oDataTable.Columns.Add(New DataColumn("Name", System.Type.[GetType]("System.String")))
@@ -1647,7 +1851,7 @@ Public Class Form1
 		Return oRet
 	End Function
 
-	Private Function GetColumnLength(ByRef cn As Data.OleDb.OleDbConnection,
+	Private Function GetColumnLength(ByRef cn As SqlConnection,
 									 ByVal sTableName As String,
 									 ByRef oTable As DataTable,
 									 ByRef oExcludeColumns As Hashtable) As Hashtable
@@ -1684,7 +1888,7 @@ Public Class Form1
 		Return oColumns
 	End Function
 
-	Private Function GetColumnFunc(ByRef cn As Data.OleDb.OleDbConnection,
+	Private Function GetColumnFunc(ByRef cn As SqlConnection,
 								   ByVal sTableName As String,
 								   ByRef oTable As DataTable,
 								   ByVal sFunc As String,
@@ -1752,7 +1956,7 @@ Public Class Form1
 		Return oColumns
 	End Function
 
-	Protected Function GetComputedColumns(ByRef cn As Data.OleDb.OleDbConnection,
+	Protected Function GetComputedColumns(ByRef cn As SqlConnection,
 										  ByVal sTableName As String,
 										  Optional ByVal sColumnName As String = "") As Hashtable
 		Dim oRet As New Hashtable
@@ -1783,12 +1987,12 @@ Public Class Form1
 		Return oRet
 	End Function
 
-	Private Function ExecuteCommand(ByRef cn As Data.OleDb.OleDbConnection, ByVal sSql As String) As String
+	Private Function ExecuteCommand(ByRef cn As SqlConnection, ByVal sSql As String) As String
 
 		If oSqlScriptWriter IsNot Nothing Then
 			oSqlScriptWriter.WriteLine(sSql)
 		Else
-			Dim cm As New OleDbCommand(sSql, cn)
+			Dim cm As New SqlCommand(sSql, cn)
 			Try
 				cm.ExecuteNonQuery()
 			Catch ex As Exception
@@ -1799,12 +2003,12 @@ Public Class Form1
 		Return ""
 	End Function
 
-	Private Function ExecuteCommand(ByRef cn As Data.OleDb.OleDbConnection, ByVal sSql As String, iCommandTimeout As Integer) As String
+	Private Function ExecuteCommand(ByRef cn As SqlConnection, ByVal sSql As String, iCommandTimeout As Integer) As String
 
 		If oSqlScriptWriter IsNot Nothing Then
 			oSqlScriptWriter.WriteLine(sSql)
 		Else
-			Dim cm As New OleDbCommand(sSql, cn)
+			Dim cm As New SqlCommand(sSql, cn)
 			cm.CommandTimeout = iCommandTimeout
 			Try
 				cm.ExecuteNonQuery()
@@ -1847,4 +2051,17 @@ Public Class Form1
 		Return num * 2
 	End Function
 
+	Private Sub chkScriptToFile_CheckedChanged(sender As Object, e As EventArgs) Handles chkScriptToFile.CheckedChanged
+		If chkBulkInsert.Checked And chkScriptToFile.Checked Then
+			MsgBox("Buld insert cannot be scripted to file")
+			chkScriptToFile.Checked = False
+		End If
+	End Sub
+
+	Private Sub chkBulkInsert_CheckedChanged(sender As Object, e As EventArgs) Handles chkBulkInsert.CheckedChanged
+		If chkBulkInsert.Checked And chkScriptToFile.Checked Then
+			MsgBox("Buld insert cannot be scripted to file")
+			chkScriptToFile.Checked = False
+		End If
+	End Sub
 End Class
